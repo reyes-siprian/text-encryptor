@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de Texto</title>
+        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <main class="container">
+            <section class="encrypter">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./images/logo.svg" alt="Alura Logo" width="64px" height="64px" class="logo__image">
+                    </a>
+                </div>
+
+                <div class="input">
+                    <textarea placeholder="Ingrese el texto aquí" class="input__textarea" id="text"></textarea>
+                </div>
+
+                
+                <div class="buttons">
+                    <p class="warning"><img src="./images/advertencia.svg" class="warning__img" alt="Icono de advertencia" height="16px" width="16px" /> Solo letras minúsculas y sin acentos</p>
+                    <a href="#" class="buttons__btn buttons__btn_blue" id="encrypt">Encriptar</a>
+                    <a href="#" class="buttons__btn buttons__btn_gray" id="decrypt">Desencriptar</a>
+                </div>
+            </section>
+
+            <section class="results">
+                <div class="results__content">
+                    <p class="result__text" id="result__text"></p>
+                    <a href="#" class="buttons__btn buttons__btn_white" id="copy">Copiar</a>
+                </div>
+
+                <div class="results__nofound">
+                    <img src="./images/buscando.png" alt="Texto no encontrado" class="results__nofound__image" />
+                    <h2 class="results__nofound__title">Ningún mensaje fue encontrado</h2>
+                    <p class="results__nofound__text">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
