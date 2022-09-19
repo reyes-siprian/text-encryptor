@@ -64,8 +64,16 @@ function decrypt() {
     document.querySelector('.results__nofound').style.display = 'none';
 }
 
+function copy() {
+    let result = document.querySelector('#result__text').textContent;
+    navigator.clipboard.writeText(result);
+}
+
 const ENCRYPT_BTN = document.querySelector('#encrypt');
 ENCRYPT_BTN.addEventListener("click", encrypt );
 
 const DECRYPT_BTN = document.querySelector('#decrypt');
 DECRYPT_BTN.addEventListener("click", decrypt );
+
+const COPY_BTN = document.querySelector('#copy');
+COPY_BTN.addEventListener("click", copy );
