@@ -71,7 +71,10 @@ body {
     max-width: 328px;
     display: inline-block;
     border: 1px solid var(--color-dark-blue-300);
+    font-size: 16px;
+    font-weight: 400;
     text-align: center;
+    cursor: pointer;
 }
 .buttons__btn,
 .buttons__btn:hover,
