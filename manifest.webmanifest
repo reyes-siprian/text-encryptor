@@ -1,0 +1,48 @@
+{
+  "short_name": "Text Encryptor",
+  "name": "Simple Text Encryptor",
+  "description": "Application to encrypt and decrypt text.",
+  "theme_color": "#0A3871",
+  "background_color": "#f3f5fc",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/images/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Simple Text Encryptor",
+      "short_name": "Text Encryptor",
+      "description": "Application to encrypt and decrypt text.",
+      "url": "/",
+      "icons": [
+        { 
+          "src": "/images/logo.svg", 
+          "sizes": "512x512" 
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-desktop.png",
+      "type": "image/png",
+      "sizes": "1498x974"
+    },
+    {
+      "src": "/images/screenshot-tablet.png",
+      "type": "image/png",
+      "sizes": "887x812"
+    },
+    {
+      "src": "/images/screenshot-mobile.png",
+      "type": "image/png",
+      "sizes": "476x793"
+    }
+  ]
+}
