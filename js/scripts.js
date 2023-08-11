@@ -6,17 +6,7 @@ const VOWELS = {
     'u': 'ufat' 
 };
 
-function encrypt() {
-    let text = document.querySelector('#text').value;
-
-    if(text == '' || text == null) {
-        document.querySelector('.results__nofound').style.display = 'block';
-        document.querySelector('.results__content').style.display = 'none';
-        return;
-    }
-
-    text = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,"");
-
+function encrypt(text) {
     textArray = text.split('');
 
     let encryptedText = textArray.map((vowel) => {
@@ -27,39 +17,35 @@ function encrypt() {
         return vowel;
     });
     
-    encryptedText = encryptedText.join('');
-
-    let result = document.querySelector('#result__text');
-    result.innerHTML = encryptedText;
-
-    document.querySelector('#text').value = '';
-    
-    document.querySelector('.results__content').style.display = 'block';
-    document.querySelector('.results__nofound').style.display = 'none';
+    return encryptedText.join('');
 }
 
-function decrypt() {
-    let text = document.querySelector('#text').value;
-
-    console.log(typeof text);
-
-    if(text == '' || text == null) {
-        document.querySelector('.results__nofound').style.display = 'block';
-        document.querySelector('.results__content').style.display = 'none';
-        return;
-    }
-
-    text = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,"");
-
+function decrypt(text) {
     for(let vowel in VOWELS) {
         text = text.replaceAll(VOWELS[vowel], vowel);
     }
+    return text;
+}
 
-    let result = document.querySelector('#result__text');
-    result.innerHTML = text;
+function isEmpty(text) {
+    if(!Boolean(text)) {
+        document.querySelector('.results__nofound').style.display = 'block';
+        document.querySelector('.results__content').style.display = 'none';
+        return true;
+    }
+    return false;
+}
+
+function normalizeText(text) {
+    return text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,"");
+}
+
+function showResult(text) {
+    const textResult = document.querySelector('#result__text');
+    textResult.innerHTML = text;
 
     document.querySelector('#text').value = '';
-
+    
     document.querySelector('.results__content').style.display = 'block';
     document.querySelector('.results__nofound').style.display = 'none';
 }
@@ -70,10 +56,26 @@ function copy() {
 }
 
 const ENCRYPT_BTN = document.querySelector('#encrypt');
-ENCRYPT_BTN.addEventListener("click", encrypt );
+ENCRYPT_BTN.addEventListener("click", () => {
+    let text = document.querySelector('#text').value;
+
+    if(isEmpty(text)) return;
+
+    text = normalizeText(text);
+    text = encrypt(text);
+    showResult(text);
+} );
 
 const DECRYPT_BTN = document.querySelector('#decrypt');
-DECRYPT_BTN.addEventListener("click", decrypt );
+DECRYPT_BTN.addEventListener("click", () => {
+    let text = document.querySelector('#text').value;
+
+    if(isEmpty(text)) return;
+
+    text = normalizeText(text);
+    text = decrypt(text);
+    showResult(text);
+} );
 
 const COPY_BTN = document.querySelector('#copy');
 COPY_BTN.addEventListener("click", copy );
