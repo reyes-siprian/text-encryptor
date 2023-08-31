@@ -5,7 +5,7 @@
   "theme_color": "#0A3871",
   "background_color": "#f3f5fc",
   "display": "standalone",
-  "start_url": "/",
+  "start_url": "/text-encryptor",
   "scope": "/",
   "icons": [
     {
