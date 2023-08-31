@@ -16,7 +16,7 @@ self.addEventListener( 'install', (e) => {
                 '/images/advertencia.svg',
                 '/images/buscando.png',
                 '/images/favicon.ico',
-                '/images/logo.svg'
+                '/images/logo.png'
             ]);
         });
 
