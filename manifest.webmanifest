@@ -5,11 +5,11 @@
   "theme_color": "#0A3871",
   "background_color": "#f3f5fc",
   "display": "standalone",
-  "start_url": "/text-encryptor",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "icons": [
     {
-      "src": "/images/logo.png",
+      "src": "./images/logo.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
@@ -20,10 +20,10 @@
       "name": "Simple Text Encryptor",
       "short_name": "Text Encryptor",
       "description": "Application to encrypt and decrypt text.",
-      "url": "/",
+      "url": "./",
       "icons": [
         { 
-          "src": "/images/logo.png", 
+          "src": "./images/logo.png", 
           "sizes": "512x512" 
         }
       ]
@@ -31,17 +31,17 @@
   ],
   "screenshots": [
     {
-      "src": "/images/screenshot-desktop.png",
+      "src": "./images/screenshot-desktop.png",
       "type": "image/png",
       "sizes": "1498x974"
     },
     {
-      "src": "/images/screenshot-tablet.png",
+      "src": "./images/screenshot-tablet.png",
       "type": "image/png",
       "sizes": "887x812"
     },
     {
-      "src": "/images/screenshot-mobile.png",
+      "src": "./images/screenshot-mobile.png",
       "type": "image/png",
       "sizes": "476x793"
     }

@@ -8,15 +8,15 @@ self.addEventListener( 'install', (e) => {
     const cacheStatic = caches.open( CACHE_NAMES.static )
         .then( cache => {
             return cache.addAll([
-                '/',
-                '/index.html',
-                '/css/styles.css',
-                '/js/scripts.js',
-                '/manifest.webmanifest',
-                '/images/advertencia.svg',
-                '/images/buscando.png',
-                '/images/favicon.ico',
-                '/images/logo.png'
+                './',
+                './index.html',
+                './css/styles.css',
+                './js/scripts.js',
+                './manifest.webmanifest',
+                './images/advertencia.svg',
+                './images/buscando.png',
+                './images/favicon.ico',
+                './images/logo.png'
             ]);
         });
 
